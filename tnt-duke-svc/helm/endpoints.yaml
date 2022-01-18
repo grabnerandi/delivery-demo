@@ -1,0 +1,4 @@
+#deploymentURIsLocal:
+#  - "<my-local-url>" # e.g. http://my-service.sockshop-dev:8080
+deploymentURIsPublic:
+  - "http://tnt-duke-svc.delivery-demo-staging.34.217.41.88.nip.io:80/"
