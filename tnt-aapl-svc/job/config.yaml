@@ -13,8 +13,7 @@ actions:
           - locust/locust.config
         env:
           - name: DEPLOYMENTURL
-            value: "index .data.deployment.deploymentURIsPublic 0"
-            valueFrom: event          
+            value: "http://tnt-aapl-svc.delivery-demo-staging.34.217.41.88.nip.io:80/"
         image: locustio/locust
         cmd:
           - locust
