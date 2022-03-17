@@ -16,6 +16,9 @@ actions:
           - locust
         args:
           - '--headless'
-          - '--host=http://tnt-aapl-svc.delivery-demo-staging.34.217.41.88.nip.io:80/'
-          - '-f=/keptn/locust/load.py'
-          - '--config=/keptn/locust/locust.config'
+          - '--host'
+          - 'http://tnt-aapl-svc.delivery-demo-staging.34.217.41.88.nip.io:80/'
+          - '--locustfile'
+          - '/keptn/locust/load.py'
+          - '--config'
+          - '/keptn/locust/locust.config'
