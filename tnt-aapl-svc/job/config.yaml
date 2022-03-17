@@ -1,0 +1,21 @@
+apiVersion: v2
+actions:
+  - name: Run locust
+    events:
+      - name: sh.keptn.event.test.triggered
+        jsonpath:
+          property: $.data.test.teststrategy
+          match: locust
+    tasks:
+      - name: Run locust smoke tests
+        files:
+          - locust/load.py
+          - locust/locust.config
+        image: locustio/locust
+        cmd:
+          - locust
+        args:
+          - '--headless'
+          - '--host=$.data.deployment.deploymentURIsPublic 0'
+          - '-f=/keptn/locust/load.py'
+          - '--config=/keptn/locust/locust.config'
