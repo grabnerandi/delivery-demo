@@ -13,7 +13,7 @@ actions:
           - locust/locust.config
         env:
           - name: DEPLOYMENTURL
-            value: "$.data.deployment.deploymentURIsPublic 0"
+            value: "index $.data.deployment.deploymentURIsPublic 0"
             valueFrom: event          
         image: locustio/locust
         cmd:
