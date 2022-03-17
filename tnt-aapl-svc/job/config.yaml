@@ -11,14 +11,11 @@ actions:
         files:
           - locust/load.py
           - locust/locust.config
-        env:
-          - name: DEPLOYMENTURL
-            value: "http://tnt-aapl-svc.delivery-demo-staging.34.217.41.88.nip.io:80/"
         image: locustio/locust
         cmd:
           - locust
         args:
           - '--headless'
-          - '--host=$(DEPLOYMENTURL)'
+          - '--host=http://tnt-aapl-svc.delivery-demo-staging.34.217.41.88.nip.io:80/'
           - '-f=/keptn/locust/load.py'
           - '--config=/keptn/locust/locust.config'
