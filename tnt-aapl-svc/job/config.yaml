@@ -14,8 +14,10 @@ actions:
         image: locustio/locust:2.8.4
         env:
           - name: DEPLOYMENTURL
-            value: "$.data.deployment.deploymentURIsPublic[0]"
-            valueFrom: event
+            value: "http://tnt-aapl-svc.delivery-demo-staging.34.217.41.88.nip.io:80/"
+            valueFrom: string
+            # value: "$.data.deployment.deploymentURIsPublic[0]"
+            # valueFrom: event
         cmd:
           - locust
         args:
