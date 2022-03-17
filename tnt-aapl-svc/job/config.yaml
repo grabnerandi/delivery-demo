@@ -5,7 +5,7 @@ actions:
       - name: sh.keptn.event.test.triggered
         jsonpath:
           property: $.data.test.teststrategy
-          match: locust
+          match: performance
     tasks:
       - name: Run locust smoke tests
         files:
