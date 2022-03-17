@@ -10,7 +10,7 @@ actions:
       - name: Run locust smoke tests
         files:
           - locust/load.py
-          - locust/locust.config
+          - locust/locust.conf
         image: locustio/locust:2.8.4
         cmd:
           - locust
@@ -21,4 +21,4 @@ actions:
           - '--locustfile'
           - '/keptn/locust/load.py'
           - '--config'
-          - '/keptn/locust/locust.config'
+          - '/keptn/locust/locust.conf'
