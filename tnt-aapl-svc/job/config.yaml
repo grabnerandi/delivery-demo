@@ -11,7 +11,7 @@ actions:
         files:
           - locust/load.py
           - locust/locust.config
-        image: locustio/locust
+        image: locustio/locust:2.8.4
         cmd:
           - locust
         args:
