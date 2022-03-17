@@ -11,11 +11,15 @@ actions:
         files:
           - locust/load.py
           - locust/locust.config
+        env:
+          - name: DEPLOYMENTURL
+            value: "$.data.deployment.deploymentURIsPublic 0"
+            valueFrom: event          
         image: locustio/locust
         cmd:
           - locust
         args:
           - '--headless'
-          - '--host=$.data.deployment.deploymentURIsPublic 0'
+          - '--host=$(DEPLOYMENTURL)'
           - '-f=/keptn/locust/load.py'
           - '--config=/keptn/locust/locust.config'
