@@ -1,5 +1,5 @@
 affinity: {}
-image: grabnerandi/simplenodeservice:1.0.2
+image: grabnerandi/simplenodeservice:2.0.1
 ingress:
   class: nginx
   clusterIssuer: issuer.letsencrypt
